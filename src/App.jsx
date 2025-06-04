@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
+import Services2 from "./components/Services2";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </section>
         <section>
           <Services />
+        </section>
+        <section>
+          <Services2 />
         </section>
       </main>
     </div>
