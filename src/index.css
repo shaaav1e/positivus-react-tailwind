@@ -3,7 +3,7 @@
 {
   --color-primary: #B9FF66;
   --color-secondary: #191A23;
-  --color-third: #F3F3F3;
+  --color-third: #F3F3F3;
 }
 body
 {
@@ -12,4 +12,18 @@ body
 .container
 {
   @apply w-[95%] md:w-[90%] mx-auto;
+}
+
+/* Scrolling animation for sponsors */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
 }

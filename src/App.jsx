@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Sponsors from "./components/Sponsors";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <main>
         <section>
           <Hero />
+        </section>
+        <section>
+          <Sponsors />
         </section>
       </main>
     </div>

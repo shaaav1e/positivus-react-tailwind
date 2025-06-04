@@ -37,7 +37,7 @@ const Hero = () => {
         <img
           src={hero}
           alt="Digital marketing illustration"
-          className="w-96 lg:w-120"
+          className="w-96 lg:w-170"
         />
       </div>
     </div>
