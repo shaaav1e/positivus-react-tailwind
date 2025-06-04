@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme
+{
+  --color-primary: #B9FF66;
+  --color-secondary: #191A23;
+  --color-third: #F3F3F3;
+}
+body
+{
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container
+{
+  @apply w-[95%] md:w-[90%] mx-auto;
+}
