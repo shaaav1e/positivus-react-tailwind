@@ -1,5 +1,4 @@
 import React from "react";
-import hero from "/hero-img.webp";
 
 const Hero = () => {
   return (
@@ -13,12 +12,20 @@ const Hero = () => {
         {/* Right Image - Hidden on desktop*/}
         <div className="lg:hidden">
           <img
-            src={hero}
+            src="/hero-img.webp"
             alt="Digital marketing illustration"
-            className="w-96 lg:w-120"
+            width="384"
+            height="288"
+            className="w-96"
             loading="eager"
             fetchpriority="high"
-            decoding="async"
+            decoding="sync"
+            style={{
+              display: "block",
+              maxWidth: "100%",
+              height: "auto",
+              aspectRatio: "4/3",
+            }}
           />
         </div>
 
@@ -38,9 +45,20 @@ const Hero = () => {
       {/* Right Image - Natural order on desktop */}
       <div className="hidden lg:block lg:w-1/2 ">
         <img
-          src={hero}
+          src="/hero-img.webp"
           alt="Digital marketing illustration"
-          className="w-96 lg:w-170"
+          width="480"
+          height="360"
+          className="w-full max-w-lg"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+          style={{
+            display: "block",
+            maxWidth: "100%",
+            height: "auto",
+            aspectRatio: "4/3",
+          }}
         />
       </div>
     </div>

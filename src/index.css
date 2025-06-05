@@ -6,6 +6,18 @@
   --color-third: #F3F3F3;
 }
 
+/* Critical CSS for hero image LCP optimization */
+img[src="/hero-img.webp"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 384px 288px;
+}
+
+@media (min-width: 1024px) {
+  img[src="/hero-img.webp"] {
+    contain-intrinsic-size: 480px 360px;
+  }
+}
+
 /* Optimized font loading with fallback */
 body
 {

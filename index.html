@@ -5,21 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preload critical hero image for better LCP -->
-    <link rel="preload" as="image" href="/hero-img.webp" />
-    <!-- Responsive preload for hero image - prioritize mobile first -->
-
-    <link
-      rel="preload"
-      as="image"
-      href="/hero-img.webp"
-      media="(max-width: 1023px)"
-      fetchpriority="high"
-    />
-
-    <!-- DNS prefetch for faster connection -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- Critical hero image preload for LCP optimization -->
+    <link rel="preload" as="image" href="/hero-img.webp" fetchpriority="high" />
 
     <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
