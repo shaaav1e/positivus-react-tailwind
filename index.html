@@ -5,8 +5,60 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Critical hero image preload for LCP optimization -->
-    <link rel="preload" as="image" href="/hero-img.webp" fetchpriority="high" />
+    <!-- AGGRESSIVE mobile preload for sub-1000ms LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-img-mobile.webp"
+      fetchpriority="high"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-img.webp"
+      fetchpriority="high"
+      media="(min-width: 768px)"
+    />
+
+    <!-- Critical CSS for instant LCP - INLINED -->
+    <style>
+      /* Critical container styles */
+      .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 90%;
+        }
+      }
+
+      /* Hero image optimization */
+      img[src="/hero-img.webp"],
+      img[src="/hero-img-mobile.webp"] {
+        content-visibility: auto;
+        contain-intrinsic-size: 280px 210px;
+        will-change: transform;
+        transform: translateZ(0);
+        image-rendering: optimizeSpeed;
+      }
+      @media (max-width: 767px) {
+        img[src="/hero-img.webp"],
+        img[src="/hero-img-mobile.webp"] {
+          max-width: 280px !important;
+          height: auto !important;
+          object-fit: cover;
+        }
+        .container {
+          contain: layout style paint;
+        }
+        body {
+          text-rendering: optimizeSpeed;
+        }
+      }
+    </style>
 
     <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

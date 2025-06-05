@@ -7,28 +7,35 @@ const Hero = () => {
       <div className="lg:w-1/2 flex flex-col gap-2">
         <h1 className=" text-5xl font-semibold leading-normal text-black mb-6">
           Navigating the <br /> digital landscape <br /> for success
-        </h1>
-
+        </h1>{" "}
         {/* Right Image - Hidden on desktop*/}
         <div className="lg:hidden">
-          <img
-            src="/hero-img.webp"
-            alt="Digital marketing illustration"
-            width="384"
-            height="288"
-            className="w-96"
-            loading="eager"
-            fetchpriority="high"
-            decoding="sync"
-            style={{
-              display: "block",
-              maxWidth: "100%",
-              height: "auto",
-              aspectRatio: "4/3",
-            }}
-          />
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcSet="/hero-img-mobile.webp"
+              type="image/webp"
+            />
+            <img
+              src="/hero-img.webp"
+              alt="Digital marketing illustration"
+              width="280"
+              height="210"
+              className="w-72"
+              loading="eager"
+              fetchpriority="high"
+              decoding="sync"
+              style={{
+                display: "block",
+                maxWidth: "280px",
+                height: "auto",
+                aspectRatio: "4/3",
+                objectFit: "cover",
+                imageRendering: "optimizeSpeed",
+              }}
+            />
+          </picture>
         </div>
-
         {/* Text and button */}
         <div className="">
           <p className="text-black mb-8 leading-relaxed">
@@ -40,8 +47,7 @@ const Hero = () => {
             Book a consultation
           </button>
         </div>
-      </div>
-
+      </div>{" "}
       {/* Right Image - Natural order on desktop */}
       <div className="hidden lg:block lg:w-1/2 ">
         <img
@@ -50,9 +56,7 @@ const Hero = () => {
           width="480"
           height="360"
           className="w-full max-w-lg"
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
+          loading="lazy"
           style={{
             display: "block",
             maxWidth: "100%",

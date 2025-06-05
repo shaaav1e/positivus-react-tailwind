@@ -6,12 +6,50 @@
   --color-third: #F3F3F3;
 }
 
-/* Critical CSS for hero image LCP optimization */
+/* AGGRESSIVE mobile LCP optimization */
 img[src="/hero-img.webp"] {
   content-visibility: auto;
-  contain-intrinsic-size: 384px 288px;
+  contain-intrinsic-size: 280px 210px;
+  will-change: transform;
+  transform: translateZ(0);
+  image-rendering: optimizeSpeed;
 }
 
+/* Mobile-first sizing - much smaller for faster loading */
+@media (max-width: 767px) {
+  img[src="/hero-img.webp"] {
+    contain-intrinsic-size: 280px 210px !important;
+    max-width: 280px !important;
+    height: auto !important;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  .container {
+    contain: layout style paint;
+    will-change: auto;
+  }
+  
+  .lg\\:hidden {
+    contain: strict;
+    isolation: isolate;
+  }
+  
+  body {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Tablet sizing */
+@media (min-width: 768px) and (max-width: 1023px) {
+  img[src="/hero-img.webp"] {
+    contain-intrinsic-size: 320px 240px;
+    max-width: 320px !important;
+  }
+}
+
+/* Desktop sizing */
 @media (min-width: 1024px) {
   img[src="/hero-img.webp"] {
     contain-intrinsic-size: 480px 360px;
