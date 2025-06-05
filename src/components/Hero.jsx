@@ -8,7 +8,7 @@ const Hero = () => {
         <h1 className=" text-5xl font-semibold leading-normal text-black mb-6">
           Navigating the <br /> digital landscape <br /> for success
         </h1>{" "}
-        {/* Right Image - Hidden on desktop*/}
+        {/* Mobile Image - Hidden on desktop*/}
         <div className="lg:hidden">
           <picture>
             <source
@@ -17,7 +17,7 @@ const Hero = () => {
               type="image/webp"
             />
             <img
-              src="/hero-img.webp"
+              src="/hero-img-mobile.webp"
               alt="Digital marketing illustration"
               width="280"
               height="210"

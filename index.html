@@ -5,20 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- AGGRESSIVE mobile preload for sub-1000ms LCP -->
+    <!-- Mobile-only preload - remove desktop preload for mobile -->
     <link
       rel="preload"
       as="image"
       href="/hero-img-mobile.webp"
       fetchpriority="high"
-      media="(max-width: 767px)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="/hero-img.webp"
-      fetchpriority="high"
-      media="(min-width: 768px)"
     />
 
     <!-- Critical CSS for instant LCP - INLINED -->
