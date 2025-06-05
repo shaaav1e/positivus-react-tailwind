@@ -110,11 +110,13 @@ const Services2 = () => {
                   Learn more
                 </p>
               </div>
-            </div>
+            </div>{" "}
             <img
               src={service.image}
               alt={service.imageAlt}
-              className="w-32 h-fit self-center"
+              className={`${
+                service.id === 1 ? "w-24" : "w-32"
+              } h-fit self-center`}
             />
           </div>
         ))}
