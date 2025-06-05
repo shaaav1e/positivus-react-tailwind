@@ -10,31 +10,24 @@ const Hero = () => {
         </h1>{" "}
         {/* Mobile Image - Hidden on desktop*/}
         <div className="lg:hidden">
-          <picture>
-            <source
-              media="(max-width: 767px)"
-              srcSet="/hero-img-mobile.webp"
-              type="image/webp"
-            />
-            <img
-              src="/hero-img-mobile.webp"
-              alt="Digital marketing illustration"
-              width="280"
-              height="210"
-              className="w-72"
-              loading="eager"
-              fetchpriority="high"
-              decoding="sync"
-              style={{
-                display: "block",
-                maxWidth: "280px",
-                height: "auto",
-                aspectRatio: "4/3",
-                objectFit: "cover",
-                imageRendering: "optimizeSpeed",
-              }}
-            />
-          </picture>
+          <img
+            src="/hero-img.webp"
+            alt="Digital marketing illustration"
+            width="280"
+            height="210"
+            className="w-72"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+            style={{
+              display: "block",
+              maxWidth: "280px",
+              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
+              imageRendering: "optimizeSpeed",
+            }}
+          />
         </div>
         {/* Text and button */}
         <div className="">
