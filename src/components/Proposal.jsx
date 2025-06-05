@@ -3,7 +3,7 @@ import proposal from "/proposal.png"; // Assuming you have a proposal image
 const Proposal = () => {
   return (
     <div className="container mt-16">
-      <div className="bg-third rounded-3xl px-3 py-4 lg:px-16 lg:py-8  flex gap-16 relative">
+      <div className="bg-third rounded-3xl px-6 py-4 lg:px-16 lg:py-8  flex gap-16 relative">
         <div className="flex flex-col gap-4">
           <div>
             <h1 className="text-secondary font-semibold text-lg">

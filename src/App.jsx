@@ -6,6 +6,7 @@ import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
 import Services2 from "./components/Services2";
 import Proposal from "./components/Proposal";
+import CaseStudies from "./components/CaseStudies";
 function App() {
   return (
     <div>
@@ -27,6 +28,9 @@ function App() {
         </section>
         <section>
           <Proposal />
+        </section>
+        <section>
+          <CaseStudies />
         </section>
       </main>
     </div>
