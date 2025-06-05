@@ -72,7 +72,8 @@ const Faq = () => {
               openFaq === faq.id ? "py-16 lg:py-6 bg-primary" : "bg-third"
             }`}
           >
-            <div className="flex justify-between">
+            {" "}
+            <div className="flex justify-between items-center gap-6 lg:gap-0">
               <div className="flex items-center gap-6">
                 <h1 className="font-bold text-2xl text-secondary">
                   {faq.title}
