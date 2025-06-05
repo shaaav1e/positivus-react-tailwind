@@ -59,16 +59,16 @@ const Faq = () => {
         </div>
         <div className="text-center lg:text-left">
           <p className="text-xs text-black">
-            Step-by-Step Guide to Achieving <br className="hidden lg:block" />{" "}
+            Step-by-Step Guide to Achieving <br className="hidden lg:block" />
             Your Business Goals
           </p>
         </div>
-      </div>{" "}
+      </div>
       <div className="mt-10">
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className={`mt-6 rounded-3xl border border-black border-b-3 w-full px-12 py-6 ${
+            className={`mt-6 rounded-full lg:rounded-3xl border border-black border-b-3 w-full px-12 py-6 ${
               openFaq === faq.id ? "bg-primary" : "bg-third"
             }`}
           >

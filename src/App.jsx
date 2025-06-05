@@ -8,6 +8,7 @@ import Services2 from "./components/Services2";
 import Proposal from "./components/Proposal";
 import CaseStudies from "./components/CaseStudies";
 import Faq from "./components/Faq";
+import Team from "./components/Team";
 function App() {
   return (
     <div>
@@ -35,6 +36,9 @@ function App() {
         </section>
         <section>
           <Faq />
+        </section>
+        <section>
+          <Team />
         </section>
       </main>
     </div>

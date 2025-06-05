@@ -5,10 +5,13 @@
   --color-secondary: #191A23;
   --color-third: #F3F3F3;
 }
+
+/* Optimized font loading with fallback */
 body
 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
+
 .container
 {
   @apply w-[95%] md:w-[90%] mx-auto;
