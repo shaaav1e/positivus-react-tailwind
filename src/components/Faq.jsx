@@ -69,7 +69,7 @@ const Faq = () => {
           <div
             key={faq.id}
             className={`mt-6 rounded-full lg:rounded-3xl border border-black border-b-3 w-full px-12 py-6 ${
-              openFaq === faq.id ? "bg-primary" : "bg-third"
+              openFaq === faq.id ? "py-16 lg:py-6 bg-primary" : "bg-third"
             }`}
           >
             <div className="flex justify-between">
