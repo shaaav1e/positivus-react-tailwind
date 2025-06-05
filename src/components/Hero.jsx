@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "/hero-img.png";
+import hero from "/hero-img.webp";
 
 const Hero = () => {
   return (
@@ -16,6 +16,9 @@ const Hero = () => {
             src={hero}
             alt="Digital marketing illustration"
             className="w-96 lg:w-120"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
 
