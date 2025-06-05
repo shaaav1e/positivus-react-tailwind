@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { TiMinus } from "react-icons/ti";
 const Faq = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (id) => {
+    setOpenFaq(openFaq === id ? null : id);
+  };
   const faqs = [
     {
       id: 1,
@@ -58,20 +63,40 @@ const Faq = () => {
             Your Business Goals
           </p>
         </div>
-      </div>
+      </div>{" "}
       <div className="mt-10">
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className="mt-6 flex justify-between rounded-3xl bg-third border border-black border-b-3 w-full px-12 py-6"
+            className={`mt-6 rounded-3xl border border-black border-b-3 w-full px-12 py-6 ${
+              openFaq === faq.id ? "bg-primary" : "bg-third"
+            }`}
           >
-            <div className="flex items-center gap-6">
-              <h1 className="font-bold text-2xl text-secondary">{faq.title}</h1>
-              <p className="text-lg font-semibold text-secondary">{faq.name}</p>
+            <div className="flex justify-between">
+              <div className="flex items-center gap-6">
+                <h1 className="font-bold text-2xl text-secondary">
+                  {faq.title}
+                </h1>
+                <p className="text-lg font-semibold text-secondary">
+                  {faq.name}
+                </p>
+              </div>
+              <button
+                onClick={() => toggleFaq(faq.id)}
+                className="bg-white rounded-full px-4 py-4 border-1 border-secondary"
+              >
+                {openFaq === faq.id ? (
+                  <TiMinus size={20} />
+                ) : (
+                  <FaPlus size={20} />
+                )}
+              </button>
             </div>
-            <div className="bg-white rounded-full px-4 py-4 border-1 border-secondary">
-              <FaPlus size={20} />
-            </div>
+            {openFaq === faq.id && (
+              <div className="mt-6 pt-6 border-t border-secondary">
+                <p className="text-secondary text-sm">{faq.dropdown}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
