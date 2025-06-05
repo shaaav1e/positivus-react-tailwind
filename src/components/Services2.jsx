@@ -88,7 +88,7 @@ const Services2 = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className={`flex flex-row rounded-3xl gap-16 border border-black border-b-3 w-full px-6 py-4 lg:px-16 lg:py-8 pt-10 ${service.bgColor}`}
+            className={`flex flex-row rounded-3xl gap-16 border border-black border-b-3 w-full px-3 py-4 lg:px-16 lg:py-8 pt-10 ${service.bgColor}`}
           >
             <div className="flex flex-col gap-16 flex-1">
               {" "}
