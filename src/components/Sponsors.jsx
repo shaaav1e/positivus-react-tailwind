@@ -31,7 +31,7 @@ const images = [
 ];
 const Sponsors = () => {
   return (
-    <div className="container mt-12 py-8">
+    <div className="container mt-8 lg:mt-4">
       {/* Desktop: Single row with animation */}
       <div className="hidden md:block overflow-hidden">
         <div className="flex animate-scroll-left gap-24 items-center">
