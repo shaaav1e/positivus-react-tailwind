@@ -116,7 +116,7 @@ const Services2 = () => {
               alt={service.imageAlt}
               className={`${
                 service.id === 1 ? "w-24" : "w-32"
-              } h-fit self-center`}
+              } xl:w-40 h-fit self-center`}
             />
           </div>
         ))}
