@@ -65,17 +65,18 @@ const Faq = () => {
         </div>
       </div>
       <div className="mt-10">
+        {" "}
         {faqs.map((faq) => (
           <div
             key={faq.id}
-            className={`mt-6 rounded-full lg:rounded-3xl border border-black border-b-3 w-full px-12 py-6 ${
+            className={`mt-6 rounded-full lg:rounded-3xl border border-black border-b-3 w-full px-12 py-6 lg:px-16 lg:py-8 pt-10 ${
               openFaq === faq.id ? "py-16 lg:py-6 bg-primary" : "bg-third"
             }`}
           >
             {" "}
             <div className="flex justify-between items-center gap-6 lg:gap-0">
               <div className="flex items-center gap-6">
-                <h1 className="font-bold text-2xl text-secondary">
+                <h1 className="font-bold text-4xl text-secondary">
                   {faq.title}
                 </h1>
                 <p className="text-lg font-semibold text-secondary">
