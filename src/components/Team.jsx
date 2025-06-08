@@ -27,21 +27,21 @@ const Team = () => {
       text: "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
     },
     {
-      id: 2,
+      id: 4,
       name: "Micheal Brown",
       position: "Senior SEO Specialist",
       image: user2,
       text: "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
     },
     {
-      id: 1,
+      id: 5,
       name: "John Smith",
       position: "CEO and Founder",
       image: user1,
       text: "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
     },
     {
-      id: 3,
+      id: 6,
       name: "Brian Williams",
       position: "Social Media Specialist",
       image: user3,
@@ -66,7 +66,7 @@ const Team = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {team.map((member) => (
           <div
-            key={member.id + member.name}
+            key={member.id}
             className="flex flex-col rounded-3xl border border-black border-b-3 w-full px-6 py-8 bg-white relative"
           >
             <div className="absolute top-6 right-6">
@@ -93,7 +93,12 @@ const Team = () => {
               </p>
             </div>
           </div>
-        ))}
+        ))}{" "}
+      </div>
+      <div className="flex justify-center lg:justify-end">
+        <button className="mt-6 px-6 py-4 text-white bg-secondary text-xs rounded-xl">
+          Get your free proposal
+        </button>
       </div>
     </div>
   );
