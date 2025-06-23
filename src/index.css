@@ -80,3 +80,129 @@ body
 .animate-scroll-left {
   animation: scroll-left 20s linear infinite;
 }
+
+/* Swiper Custom Navigation and Pagination Styles */
+
+/* Hide default Swiper navigation and pagination */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-pagination {
+  display: none !important;
+}
+
+/* Custom navigation arrows styling */
+.custom-nav-button {
+  color: white;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.custom-nav-button:hover {
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Custom pagination pentagon styling */
+.custom-pagination-dot {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-pagination-dot.active {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.custom-pagination-dot:not(.active) {
+  color: white;
+  opacity: 0.5;
+}
+
+.custom-pagination-dot:not(.active):hover {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+
+/* Navigation container styling - positioned under testimonial space */
+.custom-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem; /* Desktop: wider gap for multiple testimonials */
+  padding: 3rem 0 2rem 0;
+  margin-top: 0.2rem;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-nav-container {
+    gap: 3rem; /* Mobile: smaller gap for single testimonial */
+    padding: 2rem 0 1.5rem 0;
+    margin-top: 1.5rem;
+  }
+}
+
+
+/* Centered slide effect */
+.mySwiper .swiper-slide {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.mySwiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Side slides styling */
+.mySwiper .swiper-slide-prev,
+.mySwiper .swiper-slide-next {
+  opacity: 0.6;
+  transform: scale(0.85);
+}
+
+/* Container padding for better spacing */
+.mySwiper {
+  padding: 40px 20px 20px 20px;
+  overflow: visible;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+  .testimonial-speech-bubble {
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+    padding: 1rem !important;
+  }
+  
+  .mySwiper {
+    padding: 30px 15px 15px 15px;
+  }
+} */
+
+
+
+
+/* Responsive adjustments for speech bubble */
+/* @media (max-width: 768px) {
+  .testimonial-speech-bubble::after {
+    left: 25px;
+    border-left-width: 16px;
+    border-bottom-width: 12px;
+    bottom: -12px;
+  }
+  
+  .testimonial-speech-bubble::before {
+    left: 27px;
+    border-left-width: 12px;
+    border-bottom-width: 10px;
+    bottom: -10px;
+  }
+} */

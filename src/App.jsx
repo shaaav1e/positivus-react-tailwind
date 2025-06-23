@@ -9,6 +9,7 @@ import Proposal from "./components/Proposal";
 import CaseStudies from "./components/CaseStudies";
 import Faq from "./components/Faq";
 import Team from "./components/Team";
+import Testimonials from "./components/Testimonials";
 function App() {
   return (
     <div>
@@ -39,6 +40,9 @@ function App() {
         </section>
         <section>
           <Team />
+        </section>
+        <section>
+          <Testimonials />
         </section>
       </main>
     </div>

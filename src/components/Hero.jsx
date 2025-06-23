@@ -11,7 +11,7 @@ const Hero = () => {
         {/* Mobile Image - Hidden on desktop*/}
         <div className="lg:hidden">
           <img
-            src="/hero-img.webp"
+            src="/hero-img-mob.webp"
             alt="Digital marketing illustration"
             width="280"
             height="210"
