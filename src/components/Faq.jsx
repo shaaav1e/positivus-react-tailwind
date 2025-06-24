@@ -74,9 +74,9 @@ const Faq = () => {
             }`}
           >
             {" "}
-            <div className="flex justify-between items-center gap-6 lg:gap-0">
-              <div className="flex items-center gap-6">
-                <h1 className="font-bold text-4xl text-secondary">
+            <div className="flex justify-between items-center gap-3 lg:gap-6">
+              <div className="flex items-center gap-3 lg:gap-6 flex-1 min-w-0">
+                <h1 className="font-bold text-2xl lg:text-4xl text-secondary flex-shrink-0">
                   {faq.title}
                 </h1>
                 <p className="text-sm lg:text-lg font-semibold text-secondary">
@@ -85,7 +85,7 @@ const Faq = () => {
               </div>
               <button
                 onClick={() => toggleFaq(faq.id)}
-                className="bg-white rounded-full px-4 py-4 border-1 border-secondary"
+                className="bg-white rounded-full px-4 py-4 border-1 border-secondary flex-shrink-0"
               >
                 {openFaq === faq.id ? (
                   <TiMinus size={20} />
