@@ -56,21 +56,22 @@ const Contact = () => {
         </div>
       </div>
       <div className="bg-third text-black rounded-3xl mt-10 px-4 py-8 lg:px-32 lg:py-12 relative">
-        <div className="flex items-center gap-6">
+        {" "}
+        <div className="flex items-center justify-between lg:justify-start lg:gap-6 px-4 lg:px-0">
           {checkboxOptions.map((option) => (
-            <div
-              key={option.id}
-              className="flex items-center gap-2 px-8 lg:px-0"
-            >
+            <div key={option.id} className="flex items-center gap-2">
               {" "}
               <input
                 type="checkbox"
                 id={option.id}
                 checked={formData.checkboxes[option.id]}
                 onChange={() => handleCheckboxChange(option.id)}
-                className="w-4 h-4 appearance-none bg-white border-black border-1 rounded-full focus:ring-primary focus:ring-2 cursor-pointer relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-green-500 before:rounded-full before:opacity-0 checked:before:opacity-100 before:transition-opacity before:duration-200"
+                className="w-4 h-4 flex-shrink-0 appearance-none bg-white border-black border-1 rounded-full focus:ring-primary focus:ring-2 cursor-pointer relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-green-500 before:rounded-full before:opacity-0 checked:before:opacity-100 before:transition-opacity before:duration-200"
               />
-              <label htmlFor={option.id} className="text-sm cursor-pointer ">
+              <label
+                htmlFor={option.id}
+                className="text-xs lg:text-sm cursor-pointer whitespace-nowrap"
+              >
                 {option.label}
               </label>
             </div>

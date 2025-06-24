@@ -11,6 +11,7 @@ import Faq from "./components/Faq";
 import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div>
@@ -47,6 +48,9 @@ function App() {
         </section>
         <section>
           <Contact />
+        </section>
+        <section>
+          <Footer />
         </section>
       </main>
     </div>
