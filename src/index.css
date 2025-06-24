@@ -173,36 +173,3 @@ body
   overflow: visible;
 }
 
-/* Responsive adjustments */
-/* @media (max-width: 768px) {
-  .testimonial-speech-bubble {
-    height: 180px !important;
-    min-height: 180px !important;
-    max-height: 180px !important;
-    padding: 1rem !important;
-  }
-  
-  .mySwiper {
-    padding: 30px 15px 15px 15px;
-  }
-} */
-
-
-
-
-/* Responsive adjustments for speech bubble */
-/* @media (max-width: 768px) {
-  .testimonial-speech-bubble::after {
-    left: 25px;
-    border-left-width: 16px;
-    border-bottom-width: 12px;
-    bottom: -12px;
-  }
-  
-  .testimonial-speech-bubble::before {
-    left: 27px;
-    border-left-width: 12px;
-    border-bottom-width: 10px;
-    bottom: -10px;
-  }
-} */

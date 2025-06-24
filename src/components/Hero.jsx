@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="container mt-6 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-64">
       {/* Left Content - */}
       <div className="lg:w-1/2 flex flex-col gap-2">
-        <h1 className=" text-5xl font-semibold leading-normal text-black mb-6">
+        <h1 className="text-5xl font-semibold leading-normal text-black mb-6">
           Navigating the <br /> digital landscape <br /> for success
         </h1>{" "}
         {/* Mobile Image - Hidden on desktop*/}
