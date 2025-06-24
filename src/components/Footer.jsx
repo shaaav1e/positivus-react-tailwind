@@ -23,9 +23,9 @@ const Footer = () => {
   ];
   return (
     <div className="mt-20 container">
-      <div className="bg-secondary rounded-t-3xl px-6 py-8 lg:px-16 lg:py-8">
+      <div className="bg-secondary lg:rounded-t-3xl px-6 py-8 lg:px-16 lg:py-8">
         {/* Mobile Layout */}
-        <div className="block lg:hidden">
+        <div className="block xl:hidden">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img src={logo} alt="Logo" className="w-32" />
@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <div className="flex items-center justify-between">
             <div>
               <img src={logo} alt="Logo" className="w-42" />
