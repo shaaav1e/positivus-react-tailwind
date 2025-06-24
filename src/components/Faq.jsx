@@ -79,7 +79,7 @@ const Faq = () => {
                 <h1 className="font-bold text-4xl text-secondary">
                   {faq.title}
                 </h1>
-                <p className="text-lg font-semibold text-secondary">
+                <p className="text-sm lg:text-lg font-semibold text-secondary">
                   {faq.name}
                 </p>
               </div>
